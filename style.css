@@ -499,6 +499,7 @@ footer {
     
     .reel .arrow {
         font-size: 1rem;
+        top: 40%;
     }
     
     .reel .content > div {
