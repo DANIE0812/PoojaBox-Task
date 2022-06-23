@@ -470,7 +470,7 @@ footer {
     }
 
     .hero div {
-        height: 50vh;
+        height: 60vh;
     }
 
     #search-form img{
@@ -489,7 +489,7 @@ footer {
 
     .reel {
         width: 95%;
-        top: 120%;
+        top: 90%;
     }
     
     .reel .wrap {
@@ -553,6 +553,10 @@ footer {
 
     .item-section h3 {
         font-size: 1rem;
+    }
+
+    .shop div {
+        height: 60vh;
     }
 
     .two{
