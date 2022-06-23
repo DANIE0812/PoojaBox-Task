@@ -1,0 +1,558 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap');
+
+
+/* GENERAL STYLES */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+}
+
+
+/* HEADER SECTION STYLES */
+.header {
+    margin: 0px 40px;
+    background-color: #fff;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+    color: #000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2%;
+}
+
+.navlinks {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logo img{
+    height: 5rem;
+    width: 10rem;
+}
+
+.menu {
+    display: flex;
+    gap: 2em;
+    font-size: 1rem;
+    margin-left: 2em;
+}
+
+.menu a {
+    color: #000;
+    font-weight: 300;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+    color: #E4C384;
+}
+
+.icons {
+    display: flex;
+}
+
+.icons a {
+    cursor: pointer;
+    margin-left: .5rem;
+    height: 2.5rem;
+    line-height: 2.5rem;
+    width: 2.5rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: #192A56;
+    border-radius: 50%;
+    background-color: #eee;
+}
+
+.icons a:hover{
+    background-color: #E4C384;
+    transform: rotate(360deg);
+    transition: 0.3s ease;
+}
+
+input[type=checkbox] {
+    display: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    user-select: none;
+}
+
+
+/* SEARCH FORM STYLES */
+#search-form {
+    position: fixed;
+    top: -110%; left: 0;
+    height: 30%; width: 100%;
+    z-index: 1004;
+    background-color: #fff;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: center;
+    padding: 0 1rem;
+}
+
+#search-form.active {
+    top: 0;
+}
+
+#search-form img{
+    height: 1.5rem;
+    width: 1.5rem;
+    cursor: pointer;
+}
+
+#search-form #search-box {
+    width: 25em;
+    padding: .5rem .5rem;
+    border: transparent;
+    background: none;
+    font-size: 1rem;
+    text-transform: none;
+}
+
+#search-form #close {
+    position: absolute;
+    color: #E4C384;
+    cursor: pointer;
+    top: 2rem; right: 3rem;
+    font-size: 3rem;
+}
+
+
+/* HERO SECTION STYLES */
+.hero div {
+    height: 90vh;
+    background-image: url(images/hero-bcg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+/* GIFTS SECTION STYLES */
+.reel {
+    width: 100%;
+    position: absolute;
+    top: 125%;
+    transform: translateY(-50%);
+}
+
+.reel .wrap {
+    position: relative;
+    width: 100%;
+    max-width: 1350px;
+    padding: 20px 50px;
+    margin: auto;
+}
+
+.reel .arrow {
+    display: block;
+    position: absolute;
+    color: #000;
+    cursor: pointer;
+    font-size: 1.5rem;
+    top: 30%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    padding: 5px;
+    z-index: 22222222;
+}
+
+.reel .arrow::before{
+    cursor: pointer;
+}
+
+.reel .arrow.left {
+    left: 10px;
+}
+
+.reel .arrow.right {
+    right: 10px;
+}
+
+.reel .arrow:hover {
+    color: #E4C384;
+}
+
+.reel .content {
+    display: flex;
+    position: relative;
+    overflow: hidden;
+}
+
+.reel .content > div {
+    text-align: center;
+    position: absolute;
+    top: 0; left: 0;
+    padding: 0 0 70px 0;
+    opacity: 0;
+    margin-left: 15px;
+}
+
+.reel .content > div.inactive {
+    opacity: 1;
+}
+
+.reel .content > div.active {
+    opacity: 1;
+    position: relative;
+}
+
+.reel .content div .img img {
+    display: block;
+    width: 150px;
+    height: 150px;
+    margin: auto;
+    border-radius: 50%;
+}
+
+.reel .content div h2 {
+    font-size: .85rem;
+    margin: 10px 0;
+}
+
+
+/* ITEM SECTION STYLES */
+.item {
+    margin-top: 15rem;
+    background-color: #fff;
+}
+
+.item-section {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 5% 0 5%;
+    padding: .8rem 2%;
+}
+
+.item-select {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.item-box > img {
+    display: block;
+    width: 300px;
+    height: 300px;
+}
+
+.item-box > button {
+    width: 300px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #D43A50;
+    color: #eee;
+    border: 0px solid #eee;
+}
+
+.item-section > button {
+    width: 100px;
+    height: 30px;
+    margin-top: 5px;
+    background-color: #D43A50;
+    color: #eee;
+    border: 0px solid #eee;
+}
+
+/* HERO SECTION STYLES */
+.shop div {
+    height: 80vh;
+    background-image: url(images/scent.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin-top: 1rem;
+}
+
+.two{
+    margin-top: 1rem;
+    background-color: #fff;
+}
+
+
+/* FOOTER SECTION STYLES */
+footer {
+    background-color:#F2AEB5;
+}
+
+.nav-bar { 
+    padding: .5rem 2%;
+    margin: 20px 40px 0 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2em;
+    line-height: 2rem;
+    justify-content: space-between;
+    color: #fff;
+}
+
+.footer {
+    display: block;
+    font-size: 1rem;
+    margin-left: 2em;
+}
+
+.footer a {
+    color: #fff;
+    font-weight: 300;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+    color: #fff;
+    font-weight: 400;
+}
+
+.footer img {
+    width: 200px;
+    height: 100px;
+}
+
+.footer .fas {
+    border: 1px solid #eee;
+    border-radius: 5px;
+    padding: 1rem .7rem;
+}
+
+
+
+
+/* APPLYING MEDIA QUERIES */
+@media (max-width: 991px) {
+    
+    .header {
+        margin: 0px 20px;
+    }
+
+    .menu {
+        font-size: .85rem;
+    }
+
+    .reel {
+        width: 95%;
+    }
+    
+    .reel .wrap {
+        max-width: 1200px;
+        padding: 15px 30px;
+    }
+    
+    .reel .arrow {
+        font-size: 1.5rem;
+    }
+    
+    .reel .content div .img img {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .reel .content div h2 {
+        font-size: .85rem;
+    }
+
+    .item {
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+    
+    .item-section {
+        margin: 0 2% 0 2%;
+        padding: .5rem .5%;
+    }
+
+    .item-select {
+        gap: .8rem;
+    }
+    
+    .item-box > img {
+        width: 180px;
+        height: 180px;
+    }
+    
+    .item-box > button {
+        width: 180px;
+    }
+
+    .item-box p,
+    .item-box span{
+        font-size: .7rem;
+    }
+    
+    .item-section > button {
+        width: 75px;
+        height: 30px;
+        margin-top: 2px;
+    }
+
+    .item-section h3 {
+        font-size: 1rem;
+    }
+
+    .two{
+        margin-top: .25rem;
+    }
+}
+
+
+@media (max-width: 768px) {
+
+    .container {
+        margin: 5px 15px;
+    }
+
+    .navlinks {
+        flex-direction: row-reverse;
+    }
+
+    .logo img {
+        height: 4rem;
+        width: 8rem;
+    }
+
+    .menu {
+        display: none;
+        position: absolute;
+        background-color: #fff;
+        right: 0;
+        left: 0;
+        text-align: left;
+        padding: 15px 0;
+        margin-left: 3em;
+    }
+
+    .menu li:hover {
+        display: inline-block;
+        background-color: #000;
+        transition: 0.3s ease;
+    }
+
+    .menu li + li {
+        margin-top: 10px;
+    }
+
+    input[type=checkbox]:checked ~ .menu {
+        display: block;
+    }
+
+    .hamburger {
+        display: block;
+        margin-right: 1.5em;
+    }
+
+    .icons a {
+        height: 2rem;
+        line-height: 2rem;
+        width: 2rem;
+        font-size: 1rem;
+    }
+
+    #search-form img{
+        height: 1rem;
+        width: 1rem;
+    }
+    
+    #search-form #search-box {
+        width: 20em;
+        font-size: .8rem;
+    }
+    
+    #search-form #close {
+        font-size: 2rem;
+    }
+
+    .reel {
+        width: 95%;
+        top: 120%;
+    }
+    
+    .reel .wrap {
+        max-width: 550px;
+        padding: 15px 30px;
+    }
+    
+    .reel .arrow {
+        font-size: 1rem;
+    }
+    
+    .reel .content > div {
+        padding: 0 0 10px 0;
+        margin-left: 5px;
+    }
+    
+    .reel .content div .img img {
+        width: 85px;
+        height: 85px;
+    }
+    
+    .reel .content div h2 {
+        font-size: .65rem;
+        margin: 5px 0;
+    }
+
+    .item {
+        margin-top: 10rem;
+        overflow: hidden;
+    }
+    
+    .item-section {
+        padding: .5rem .5%;
+    }
+    
+    .item-select {
+        gap: 1rem;
+    }
+    
+    .item-box > img {
+        width: 200px;
+        height: 200px;
+    }
+    
+    .item-box > button {
+        width: 200px;
+        height: 30px;
+        margin-top: 5px;
+    }
+
+    .item-box p,
+    .item-box span{
+        font-size: .85rem;
+    }
+    
+    .item-section > button {
+        width: 80px;
+        height: 30px;
+        margin-top: 2px;
+    }
+
+    .item-section h3 {
+        font-size: 1rem;
+    }
+
+    .two{
+        margin-top: .25rem;
+    }
+
+}
